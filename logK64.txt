@@ -1,0 +1,22 @@
+Input data's folder path(default: A:\Sam\Lab\SIGIR2017\Data\DBLP\)	=../../Data/DBLP/
+start to load data in ../../Data/DBLP/
+2446827 documents loaded
+10083090 edges loaded
+Output Graph data prefix(default: A:\Sam\Lab\SIGIR2017\Result\CTCD\test)	=../../Result/DBLP/CTCD/K64
+Number of threads for parallelization(default: 40)	=40
+The number of communities to detect(default: 10)	=10
+The number of topics in one community to detect(default: 10)	=10
+Number of update iterations(default: 5000)	=300
+How many iterations for once save(default: 100)	=1000
+Alpha(default: 0.1)	=0.1
+Beta(default: 0.1)	=0.1
+Epsilon(default: 0.1)	=0.1
+Rho(default: 0.1)	=0.1
+Sigma(default: 0.1)	=0.1
+Lambda0(default: 1)	=64
+Lambda0(default: 0.1)	=0.1
+Lambda1(default: 1150.69)	=1150.69
+Sat Dec 24 23:02:44 2016 Model loads done
+Sat Dec 24 23:02:44 2016 Model allocates done
+Sat Dec 24 23:02:45 2016 Model initiates done
+Sat Dec 24 23:02:45 2016 iteration 0

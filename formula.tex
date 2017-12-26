@@ -1,0 +1,67 @@
+\documentclass{article} 
+\usepackage{abstract}
+\usepackage{graphicx}  
+\usepackage{CJKutf8}
+\usepackage{latexsym}
+\usepackage{listings}
+\lstset{breaklines}
+\lstset{extendedchars=false}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\pagestyle{plain}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{align*}
+	&P(c_{ij}=c_p|z_{ij}=k, t_{ij}=t, c_{-ij}, s', z_{-ij}, t_{-ij},.)\\
+	&=\frac{P(c,s'|\rho)}{P(c_{-ij},s'|\rho)}
+	\frac{P(z|c,\alpha)}{P(z|c_{-ij},\alpha)}
+	\frac{P(t|c,z,\epsilon)}{P(t|c_{-ij},z,\epsilon)}\\
+	&\propto \frac{n_i^{(c_p)}+\rho}{n_i^{(\cdot_p)}+C\rho}
+	\frac{n_{c_p}^{(k)}+\alpha}{n_{c_p}^{(\cdot)}+K\alpha}
+	\frac{t_{ij}^{\psi_{c_pk0}-1}\cdot (1-t_{ij})^{\psi_{c_pk1}-1}}{B(\psi_{c_pk0}, \psi_{c_pk1})}
+\end{align*}
+
+
+
+\begin{align*}
+	&P(z_{ij}=k|c_{ij}=c_p, t_{ij}=t, c_{-ij}, z_{-ij}, t_{-ij},.)\\
+	&=\frac{P(z|c,\alpha)}{P(z_{-ij}|c,\alpha)}
+	\frac{P(t|c,z,\epsilon)}{P(t|c,z_{-ij},\epsilon)}
+	\frac{P(w|z,\beta)}{P(w|z_{-ij},\beta)}\\
+	&\propto \frac{n_{c_p}^{(k)}+\alpha}{n_{c_p}^{(\cdot)}+K\alpha}
+	\frac{t_{ij}^{\psi_{c_pk0}-1}\cdot (1-t_{ij})^{\psi_{c_pk1}-1}}{B(\psi_{c_pk0}, \psi_{c_pk1})}
+	\frac{\prod_{v=1}^{V}{\prod_{q=0}^{n_{ij}^{(v)}}{(n_k^{(v)}+q+\beta)}}}{\prod_{q=0}^{n_{ij}^{(\cdot)}}{(n_k^{(\cdot)}+q+\beta)}}
+\end{align*}
+
+
+
+\begin{align*}
+	&P(s_{ii'}=c_i, s'_{ii'}=c_p|e_{ii'}=1,s_{-ii'},c,e,.)\\
+	&=\frac{P(s|\sigma)}{P(s_{-ii'}|\sigma)}
+	\frac{P(c,s'|\rho)}{P(c,s'_{-ii'}|\rho)}
+	\frac{P(e|s,s',\lambda)}{P(e|s_{-ii'},s'_{-ii'},\lambda)}
+	\frac{P(t|s,\delta)}{P(t|s_{-ii'},\delta)}
+	\frac{P(t'|s',\gamma)}{P(t'|s'_{-ii'},\gamma)}\\
+	&\propto \frac{n_i^{(c_i)}+\sigma}{n_i^{(\cdot_i)}+C\sigma}
+	\frac{n_{i'}^{(c_p)}+\rho}{n_{i'}^{(\cdot_p)}+C\rho}
+	\frac{\lambda_0+n_{c_ic_p}}{\lambda_0+\lambda_1+n_{c_ic_p}}
+	\prod_{t_{ii'm}}{\frac{t_{ii'm}^{\delta_{ic_i0}-1}(1-t_{ii'm})^{\delta_{ic_i1}-1}}{B(\delta_{ic_i0},\delta_{ic_i1})}}
+	\prod_{{t'}_{ii'm}}{\frac{{t'}_{ii'm}^{\gamma_{i'c_p0}-1}(1-{t'}_{ii'm})^{\gamma_{i'c_p1}-1}}{B(\gamma_{i'c_p0},\gamma_{i'c_p1})}}
+\end{align*}
+
+\begin{align*}
+	&\psi_{c_pk0}=\bar{t}_{c_pk}(\frac{\bar{t}_{c_pk}(1-\bar{t}_{c_pk})}{s_{c_pk}^2}-1)\\
+	&\psi_{c_pk1}=(1-\bar{t}_{c_pk})(\frac{\bar{t}_{c_pk}(1-\bar{t}_{c_pk})}{s_{c_pk}^2}-1)
+\end{align*}
+
+\begin{align*}
+	&\delta_{ic_i0}=\bar{t}_{ic_i}(\frac{\bar{t}_{ic_i}(1-\bar{t}_{ic_i})}{s_{ic_i}^2}-1)\\
+	&\delta_{ic_i1}=(1-\bar{t}_{ic_i})(\frac{\bar{t}_{ic_i}(1-\bar{t}_{ic_i})}{s_{ic_i}^2}-1)
+\end{align*}
+
+\begin{align*}
+	&\psi_{i'c_p0}=\bar{t}_{i'c_p}(\frac{\bar{t}_{i'c_p}(1-\bar{t}_{i'c_p})}{s_{i'c_p}^2}-1)\\
+	&\psi_{i'c_p1}=(1-\bar{t}_{i'c_p})(\frac{\bar{t}_{i'c_p}(1-\bar{t}_{i'c_p})}{s_{i'c_p}^2}-1)
+\end{align*}
+\end{document}
